@@ -1,0 +1,34 @@
+body
+	topper
+		banner
+			banner-left
+			img-placeholder
+			
+
+body: flex, flex:1, column
+
+	topper: flex, flex-shrink:0, column
+	
+		banner: flex
+		
+			banner-left: just font size stuff
+			img-placeholder (img): just border and width stuff
+			
+
+
+==
+
+body
+	container-three
+		cta-outer
+			call-to-action-box (flex, column)
+				cta-left
+				cta-button
+				
+body = body
+	container-three = topper
+		cta-outer = banner
+			call-to-action-box = make it like banner, too
+			
+			compare CTA-LEFT w BANNER-LEFT
+					

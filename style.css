@@ -1,30 +1,214 @@
+html,
 body {
-    display: flex; /* flexbox */
-    flex-direction: column; /* for page direction w footer */
+    height: 100%;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    flex: 1;
+    margin: 0;
 }
 
 ul {
     list-style: none;
     margin: 0;
     padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.text {
+    color: #E5E7EB;
+    font-size: 18px;
 }
 
 footer,
 .topper {
-    background-color: rgb(26, 37, 48);
-    color: seashell;
+    background-color: #1F2937;
+    color: #F9FAF8;
+}
+
+.topper {
+    display: flex;
+    flex-shrink: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* REDO THIS, it should act more like the CTA box does in terms of centering and being able to go to the edge */
+.helpmecenterthis {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+}
+
+.navbar {
+    display: flex;
+    flex: 1;
+    padding: 10px;
+    margin: 0;
+    align-items: center;
+}
+
+button.signup {
+    background-color: rgb(94, 129, 243);
+    border-style: none;
+    color: whitesmoke;
+    display: flex;
+    padding: 5px 25px; 
+    justify-content: center;
+    border-radius: 6px;
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+    margin: 100px 0;
+}   
+
+.banner-left {
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.banner-left .headline {
+    font-size: 48px;
+    font-weight: bolder;
+}
+
+.img-placeholder {
+    max-width: 100%;
+    display: flex;
+    height: auto;
+    flex-shrink: 0;
+    padding-left: 12px;
+}
+
+.main-section {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    justify-content: space-evenly;
+}
+
+.container-one {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container-one .headline {
+    display: flex;
+    justify-content: center;
+    font-size: larger;
+    padding: 12px 0px 36px 0px;
+}
+
+.four-boxes-cotainer {
+    display: flex;
+    justify-content: center;
+}
+
+.boxes {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    padding: 0px 0px 24px 0px;
+}
+
+.boxes .text {
+    max-width: 150px;
+    color: unset;
+    font-weight: lighter;
+}
+
+.infoimgs {
+    border-radius: 10px;
+    border-color: rgb(94, 129, 243);
+    border-width: 2px;
+    border-style: solid;
+    max-width: 150px;
 }
 
 .container-two {
     background-color: rgb(224, 228, 232);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 25px 0;
+}
+
+.quotebox {
+    max-width: 60%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.quote {
+    font-style: italic;
+    font-size: x-large;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+.quote-attribute {
+    display: flex;
+    justify-content: right;
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+.cta-outer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0 50px 0;
+}
+
+.cta-left {
+    display: flex;
+    flex-direction: column;
+    padding-right: 100px;
 }
 
 .call-to-action-box {
-    background-color: rgb(0, 126, 239);
+    background-color: rgb(94, 129, 243);
+    padding: 25px 40px;
+    border-radius: 8px;
+    color: rgb(224, 228, 232);
+    display: flex;
+    /* flex-direction: column; */ /* This line caused me 30 minutes of debugging. It caused the "sign up" button to stay below and not move to the right */
+    align-items: center;
+}
+
+.call-to-action-box button.signup {
+    border-style: solid;
+    border-color: whitesmoke;
+    color: whitesmoke;
 }
 
 footer {
     display:flex;
+    height: 75px; /* Somehow this property stopped applying... fix this */
     align-items: center; /* Come back and play with this to better understand the impact of align-items and align-content */
     justify-content: center;
+}
+
+/* Reusables */
+/* Alignment stuff */
+.push-right {
+    display: flex;
+    margin-left: auto;
+    gap: 16px;
+    align-items: center;
+    padding: 8px 16px 8px 8px; 
+}
+
+/* Font or coloring-specific */
+.bold {
+    font-weight: 700;
 }

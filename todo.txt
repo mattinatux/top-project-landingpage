@@ -1,0 +1,9 @@
+> Header Logo indented right, move left
+
+> Footer isn't tall enough, fix
+
+> Fix fonts and colors
+
+> Review it all again to see what I missed
+
+> Optimize code. Can I remove anything?

@@ -8,3 +8,23 @@ ul {
     margin: 0;
     padding: 0;
 }
+
+footer,
+.topper {
+    background-color: rgb(26, 37, 48);
+    color: seashell;
+}
+
+.container-two {
+    background-color: rgb(224, 228, 232);
+}
+
+.call-to-action-box {
+    background-color: rgb(0, 126, 239);
+}
+
+footer {
+    display:flex;
+    align-items: center; /* Come back and play with this to better understand the impact of align-items and align-content */
+    justify-content: center;
+}

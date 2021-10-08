@@ -1,13 +1,10 @@
-html,
-body {
-    height: 100%;
-}
-body {
+html,body {
     display: flex;
     flex-direction: column;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     flex: 1;
     margin: 0;
+    height: 100%;
 }
 
 ul {
@@ -37,25 +34,18 @@ footer,
     justify-content: center;
 }
 
-/* REDO THIS, it should act more like the CTA box does in terms of centering and being able to go to the edge */
-.helpmecenterthis {
-    display: flex;
-    flex-direction: column;
-    width: 75%;
-}
-
 .navbar {
     display: flex;
     flex: 1;
-    padding: 10px;
+    padding: 16px 0px 8px 0px; 
     margin: 0;
     align-items: center;
 }
 
 button.signup {
-    background-color: rgb(94, 129, 243);
+    background-color: #3882F6;
     border-style: none;
-    color: whitesmoke;
+    color: #e6e7eb;
     display: flex;
     padding: 5px 25px; 
     justify-content: center;
@@ -76,7 +66,8 @@ button.signup {
 
 .banner-left .headline {
     font-size: 48px;
-    font-weight: bolder;
+    font-weight: extra-bold;
+    color: #F9FAF8;
 }
 
 .img-placeholder {
@@ -103,8 +94,10 @@ button.signup {
 .container-one .headline {
     display: flex;
     justify-content: center;
-    font-size: larger;
+    font-size: 36px;
     padding: 12px 0px 36px 0px;
+    font-weight: 900;
+    color: #1F2937;
 }
 
 .four-boxes-cotainer {
@@ -114,7 +107,7 @@ button.signup {
 
 .boxes {
     display: flex;
-    gap: 8px;
+    gap: 18px;
     justify-content: center;
     padding: 0px 0px 24px 0px;
 }
@@ -134,7 +127,7 @@ button.signup {
 }
 
 .container-two {
-    background-color: rgb(224, 228, 232);
+    background-color: #E5E7EB;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -150,9 +143,18 @@ button.signup {
 
 .quote {
     font-style: italic;
-    font-size: x-large;
+    font-size: 36px;
     margin-bottom: 0px;
     padding-bottom: 0px;
+    color: #1F2937;
+    font-family: sans-serif;
+}
+
+blockquote p {
+    font-weight: 100;
+    padding: 0;
+    margin: 0;
+    font-weight: 100;
 }
 
 .quote-attribute {
@@ -176,8 +178,8 @@ button.signup {
 }
 
 .call-to-action-box {
-    background-color: rgb(94, 129, 243);
-    padding: 25px 40px;
+    background-color: #3882F6;
+    padding: 35px 40px;
     border-radius: 8px;
     color: rgb(224, 228, 232);
     display: flex;
@@ -193,7 +195,10 @@ button.signup {
 
 footer {
     display:flex;
-    height: 75px; /* Somehow this property stopped applying... fix this */
+    height: 75px;
+        /* Somehow this ^^^ property stopped applying... fix this */
+        /* Fixed: issue was html was set to height=100% but isn't a flexbox of its own. kept height=100% on body, but removed from html. looks ok. */
+        /* Oops, it didn't look OK. It now didn't fill the page when zoomed out. Fixed by making html and body have same properties. Looks ok again. */
     align-items: center; /* Come back and play with this to better understand the impact of align-items and align-content */
     justify-content: center;
 }
@@ -205,7 +210,6 @@ footer {
     margin-left: auto;
     gap: 16px;
     align-items: center;
-    padding: 8px 16px 8px 8px; 
 }
 
 /* Font or coloring-specific */

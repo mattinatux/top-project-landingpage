@@ -1,10 +1,13 @@
-html, body {
+html {
+    height: 100vh;
+    display: flex;
+}
+body {
     display: flex;
     flex-direction: column;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     flex: 1;
     margin: 0;
-    height: 100%;
 }
 
 ul {
@@ -203,6 +206,7 @@ footer {
         /* Somehow this ^^^ property stopped applying... fix this */
         /* Fixed: issue was html was set to height=100% but isn't a flexbox of its own. kept height=100% on body, but removed from html. looks ok. */
         /* Oops, it didn't look OK. It now didn't fill the page when zoomed out. Fixed by making html and body have same properties. Looks ok again. */
+        /* lol that all didn't work. NOW it looks like I found the answer... set html to a flex and throw the 100vh there. Boom, done. */
     align-items: center; /* Come back and play with this to better understand the impact of align-items and align-content */
     justify-content: center;
 }
